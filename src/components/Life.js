@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import styled from 'styled-components';
 import { MDBView, MDBMask } from "mdbreact";
 import ph from './../images/background.jpg';
@@ -10,17 +10,17 @@ const StyledCard = styled(Card)`
     border: 2px solid white; // temp for visualisation
 `;
 
-function Projects(props) {
+function Life(props) {
   return (
     <StyledCard bg="dark" text="light">
       <MDBView hover zoom>
         <Card.Img variant="top" src={ph} />
         <MDBMask className="flex-center">
-          <p className="white-text" >{"> Hello World"}</p>
+          <p className="white-text" >life(home)</p>
         </MDBMask>
       </MDBView>
     </StyledCard>
   )
 }
 
-export default Projects;
+export default Life;

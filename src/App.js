@@ -9,9 +9,9 @@ import Articles from './components/Articles';
 import About from './components/About';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import TopNav from './components/TopNav';
-import MainCards from './components/MainCards';
+import MainCard from './components/MainCard';
 
-const StyledMainCards = styled.div`
+const StyledMainCard = styled.div`
     background-color: #000000!important;
     padding: 4em 2em;
 `;
@@ -44,9 +44,9 @@ function App() {
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
           crossorigin="anonymous"
         /> */}
-        <StyledMainCards>
-          <MainCards></MainCards>
-        </StyledMainCards>
+        <StyledMainCard>
+          <MainCard></MainCard>
+        </StyledMainCard>
 
         {/* <div className="filler" style={{ height: '200rem'}}></div> */}
 

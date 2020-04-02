@@ -16,7 +16,7 @@ function Articles(props) {
       <MDBView hover zoom>
         <Card.Img variant="top" src={ph} />
         <MDBMask className="flex-center">
-          <p className="white-text" >{"> Hello World"}</p>
+          <p className="white-text" >{"articles"}</p>
         </MDBMask>
       </MDBView>
     </StyledCard>

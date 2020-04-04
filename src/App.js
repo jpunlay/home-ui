@@ -24,7 +24,6 @@ const StyledTopBox = styled.div`
 const StyledTopBoxPar = styled.p`
     margin: 0!important;
     text-align: center;
-    height: 200px;
     line-height: 400px;
     color: #555555;
 `;

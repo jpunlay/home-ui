@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import CardGroup from "react-bootstrap/CardGroup";
 import "holderjs";
 import About from "./About";
-import Hobbies from "./Hobbies";
-import Projects from "./Projects";
+import Hobbies from "./hobbies/Hobbies";
+import Projects from "./projects/Projects";
 import Articles from "./Articles";
 import Life from "./Life";
-import ProjectsDescription from "./ProjectsDescription";
+import ProjectsDescription from "./projects/ProjectsDescription";
+import HobbiesDescription from "./hobbies/HobbiesDescription";
 
 class MainCard extends React.Component {
   constructor(props) {
@@ -21,10 +22,12 @@ class MainCard extends React.Component {
     this.setState({ isOpen: true });
     switch (openedCard) {
       case "project":
-        this.setState({ openedCard: <ProjectsDescription onClick={this.handleCloseClick}></ProjectsDescription> });
+        console.log('projects')
+        this.setState({ openedCard: <ProjectsDescription onClick={this.handleCloseClick}></ProjectsDescription>});
         break;
       case "hobbies":
-        // code block
+        console.log('test')
+        this.setState({ openedCard: <HobbiesDescription onClick={this.handleCloseClick}></HobbiesDescription>});
         break;
       default:
       // code block

@@ -3,10 +3,6 @@ import './App.css';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import Hobbies from './components/Hobbies';
-import Projects from './components/Projects';
-import Articles from './components/Articles';
-import About from './components/About';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import TopNav from './components/TopNav';
 import MainCard from './components/MainCard';

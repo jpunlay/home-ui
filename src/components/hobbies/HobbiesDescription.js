@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { MDBView, MDBMask } from "mdbreact";
-import sign from "./../images/sign.jpg";
+import sign from "./../../images/sign.jpg";
 import Card from "react-bootstrap/Card";
 
 const StyledCard = styled(Card)`
@@ -15,18 +15,19 @@ const StyledText = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
-  // margin-right: -50%;
-  transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%);
+  text-align: justify;
+  text-justify: inter-word;
 `;
 
-function ProjectsDescription(props) {
+function HobbiesDescription(props) {
   return (
     <StyledCard bg="dark" text="light" onClick={props.onClick}>
-
       <MDBView>
         <Card.Img variant="top" src={sign} />
         <MDBMask>
           <StyledText>
+            <h2>Hobbies</h2>
             <p className="grey-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -61,4 +62,4 @@ function ProjectsDescription(props) {
   );
 }
 
-export default ProjectsDescription;
+export default HobbiesDescription;

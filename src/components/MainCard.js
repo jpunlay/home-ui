@@ -12,6 +12,7 @@ class MainCard extends React.Component {
   constructor(props) {
     super(props);
     this.handleOpenClick = this.handleOpenClick.bind(this);
+    this.handleCloseClick = this.handleCloseClick.bind(this);
     this.state = { isOpen: false };
     this.state = { openedCard: null };
   }
@@ -20,7 +21,7 @@ class MainCard extends React.Component {
     this.setState({ isOpen: true });
     switch (openedCard) {
       case "project":
-        this.setState({ openedCard: <ProjectsDescription></ProjectsDescription> });
+        this.setState({ openedCard: <ProjectsDescription onClick={this.handleCloseClick}></ProjectsDescription> });
         break;
       case "hobbies":
         // code block
@@ -28,6 +29,10 @@ class MainCard extends React.Component {
       default:
       // code block
     }
+  }
+
+  handleCloseClick() {
+    this.setState({ isOpen: false });
   }
 
   render() {
@@ -40,12 +45,12 @@ class MainCard extends React.Component {
         <div className="mainCard">
           <CardGroup>
             <Projects onClick={() => this.handleOpenClick('project')}></Projects>
-            <Hobbies onClick={this.handleOpenClick('hobbies')}></Hobbies>
+            <Hobbies onClick={() => this.handleOpenClick('hobbies')}></Hobbies>
           </CardGroup>
           <CardGroup>
-            <About onClick={this.handleOpenClick('about')}></About>
-            <Articles onClick={this.handleOpenClick('articles')}></Articles>
-            <Life onClick={this.handleOpenClick('life')}></Life>
+            <About onClick={() => this.handleOpenClick('about')}></About>
+            <Articles onClick={() => this.handleOpenClick('articles')}></Articles>
+            <Life onClick={() => this.handleOpenClick('life')}></Life>
           </CardGroup>
         </div>;
     } else {

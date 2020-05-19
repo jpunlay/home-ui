@@ -10,7 +10,7 @@ function Projects(props) {
       <MDBView hover zoom>
         <Card.Img variant="top" src={bulb} />
         <MDBMask className="flex-center">
-          <p className="grey-text">{"> Hello World"}</p>
+          <p className="white-text">{"> Hello World"}</p>
         </MDBMask>
       </MDBView>
     </Card>

@@ -10,7 +10,7 @@ function Hobbies(props) {
       <MDBView hover zoom>
         <Card.Img variant="top" src={tri} />
         <MDBMask className="flex-center">
-          <p className="grey-text">H obbies</p>
+          <p className="white-text">H obbies</p>
         </MDBMask>
       </MDBView>
     </Card>

@@ -5,20 +5,31 @@ import sign from "./../../images/sign.jpg";
 import Card from "react-bootstrap/Card";
 
 const StyledText = styled.div`
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: justify;
-  text-justify: inter-word;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify;
+    text-justify: inter-word;
+`;
+
+const StyledCard = styled(Card)`
+    background-color: black !important;
+    height: 45vw;
+    display: block;
+    width: 100%;
+`;
+
+const StyledImage = styled(Card.Img)`
+    height: 100%!important;
 `;
 
 function ProjectsDescription(props) {
   return (
-    <Card bg="dark" text="light" onClick={props.onClick}>
+    <StyledCard bg="dark" text="light" onClick={props.onClick}>
       <MDBView>
-        <Card.Img variant="top" src={sign}/>
+        <StyledImage variant="top" src={sign} />
         <MDBMask>
           <StyledText>
             <h2>Projects</h2>
@@ -52,7 +63,7 @@ function ProjectsDescription(props) {
           </StyledText>
         </MDBMask>
       </MDBView>
-    </Card>
+    </StyledCard>
   );
 }
 

@@ -8,6 +8,7 @@ import Articles from "./acticles/Articles";
 import Life from "./life/Life";
 import ProjectsDescription from "./projects/ProjectsDescription";
 import HobbiesDescription from "./hobbies/HobbiesDescription";
+import styled from "styled-components";
 
 class MainCard extends React.Component {
   constructor(props) {
@@ -43,9 +44,13 @@ class MainCard extends React.Component {
     const openedCard = this.state.openedCard;
     let main;
 
+    const StyledMainCard = styled.div`
+      background-color: black;
+    `;
+
     if (!isOpen) {
       main =
-        <div className="mainCard">
+        <StyledMainCard className="mainCard">
           <CardGroup>
             <Projects onClick={() => this.handleOpenClick('project')}></Projects>
             <Hobbies onClick={() => this.handleOpenClick('hobbies')}></Hobbies>
@@ -55,7 +60,7 @@ class MainCard extends React.Component {
             <Articles onClick={() => this.handleOpenClick('articles')}></Articles>
             <Life onClick={() => this.handleOpenClick('life')}></Life>
           </CardGroup>
-        </div>;
+        </StyledMainCard>;
     } else {
       main =
         <div className="descriptionCard">

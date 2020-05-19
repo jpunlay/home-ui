@@ -4,11 +4,6 @@ import { MDBView, MDBMask } from "mdbreact";
 import sign from "./../../images/sign.jpg";
 import Card from "react-bootstrap/Card";
 
-const StyledCard = styled(Card)`
-    background-color: #000000!important;
-    border: 2px solid white; // temp for visualisation
-`;
-
 const StyledText = styled.div`
   margin: 0;
   position: absolute;
@@ -21,7 +16,7 @@ const StyledText = styled.div`
 
 function ProjectsDescription(props) {
   return (
-    <StyledCard bg="dark" text="light" onClick={props.onClick}>
+    <Card bg="dark" text="light" onClick={props.onClick}>
       <MDBView>
         <Card.Img variant="top" src={sign}/>
         <MDBMask>
@@ -57,7 +52,7 @@ function ProjectsDescription(props) {
           </StyledText>
         </MDBMask>
       </MDBView>
-    </StyledCard>
+    </Card>
   );
 }
 

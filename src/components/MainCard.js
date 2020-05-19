@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import CardGroup from "react-bootstrap/CardGroup";
 import "holderjs";
-import About from "./About";
+import About from "./about/About";
 import Hobbies from "./hobbies/Hobbies";
 import Projects from "./projects/Projects";
-import Articles from "./Articles";
-import Life from "./Life";
+import Articles from "./acticles/Articles";
+import Life from "./life/Life";
 import ProjectsDescription from "./projects/ProjectsDescription";
 import HobbiesDescription from "./hobbies/HobbiesDescription";
 

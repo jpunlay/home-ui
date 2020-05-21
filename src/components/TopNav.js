@@ -6,28 +6,27 @@ import styled from 'styled-components';
 
 
 const StyledNavBar = styled(Navbar)`
-    background-color: #101010!important; 
-    // font-family: Montserrat;
+    background-color: #000000!important; 
+`;
+
+const StyledNavBarBrand = styled(Navbar.Brand)`
+    font-size: 1rem;
 `;
 
 function TopNav(props) {
     return (
         <div className="topNav">
             <StyledNavBar bg="dark" variant="dark" expand="lg">
-                <Navbar.Brand href="/">
+                <StyledNavBarBrand href="/">
                     JP
-                </Navbar.Brand>
+                </StyledNavBarBrand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto" pullRight>
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <NavDropdown title="Dropdown" id="basic-nav-dropdown" pullRight>
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                        </NavDropdown>
-                        <Nav.Link href="#home">Feedback</Nav.Link>
+                        <Nav.Link href="#blog">BLOG</Nav.Link>
+                        <Nav.Link href="#resume">RESUME</Nav.Link>
+                        <Nav.Link href="#feedback">FEEDBACK</Nav.Link>
+                        <Nav.Link href="#repo">REPO</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </StyledNavBar>

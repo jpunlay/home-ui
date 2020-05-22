@@ -5,10 +5,11 @@ import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import TopNav from './components/TopNav';
 import MainCard from './components/MainCard';
+import FollowAt from "react-social-media-follow";
 
 const StyledMainCard = styled.div`
     background-color: #000000!important;
-    padding: 4em 2em;
+    padding: 1em 2em;
 `;
 
 const StyledTopBox = styled.div`
@@ -19,28 +20,37 @@ const StyledTopBox = styled.div`
 const StyledTopBoxPar = styled.p`
     margin: 0!important;
     text-align: center;
-    line-height: 400px;
+    // line-height: 400px;
     color: #555555;
 `;
 
-function App() {
-  return (
-    <BrowserRouter>
-      <Route path="/home-ui">
-        <div className="App">
-          <TopNav></TopNav>
-          <StyledTopBox className="topBox">
-            <StyledTopBoxPar>
-            </StyledTopBoxPar>
-          </StyledTopBox>
-          <StyledMainCard>
-            <MainCard></MainCard>
-          </StyledMainCard>
-        </div>
-      </Route>
-    </BrowserRouter>
+const links = [
+    'https://www.linkedin.com/in/jesus-punlay-068098110/',
+    'https://twitter.com/jesuspunlay',
+    'https://www.facebook.com/jesuspunlay',
+    'https://www.youtube.com/jesuspunlay',
+    'https://www.instagram.com/jesuspunlay/',
+    'https://github.com/jpunlay'
+];
 
-  );
+function App() {
+    return (
+        <BrowserRouter>
+            <div className="App">
+                <TopNav></TopNav>
+                <Route path="/home-ui">
+                    <StyledTopBox className="topBox">
+                        <StyledTopBoxPar>
+                        </StyledTopBoxPar>
+                    </StyledTopBox>
+                    <StyledMainCard>
+                        <MainCard></MainCard>
+                    </StyledMainCard>
+                    <FollowAt links = {links} color="grey" hoverColor="white" iconSize="1" />
+                </Route>
+            </div>
+        </BrowserRouter>
+    );
 }
 
 export default App;

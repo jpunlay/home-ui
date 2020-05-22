@@ -10,7 +10,7 @@ const StyledCard = styled(Card)`
 
 function About(props) {
     return (
-        <StyledCard bg="dark" text="light">
+        <StyledCard bg="dark" text="light" onClick={props.onClick}>
             <MDBView hover zoom>
                 <Card.Img variant="top" src={ph} />
                 <MDBMask className="flex-center">

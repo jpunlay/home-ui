@@ -1,9 +1,7 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import styled from 'styled-components';
-
 
 const StyledNavBar = styled(Navbar)`
     background-color: #000000!important; 
@@ -17,7 +15,7 @@ function TopNav(props) {
     return (
         <div className="topNav">
             <StyledNavBar bg="dark" variant="dark" expand="lg">
-                <StyledNavBarBrand href="/">
+                <StyledNavBarBrand href="/home-ui">
                     JP
                 </StyledNavBarBrand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />

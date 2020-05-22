@@ -4,17 +4,21 @@ import { MDBView, MDBMask } from "mdbreact";
 import ph from './../../images/ph1.jpeg';
 import Card from 'react-bootstrap/Card';
 
+const StyledCard = styled(Card)`
+    background-color: black !important;
+`;
+
 function About(props) {
-  return (
-    <Card bg="dark" text="light">
-      <MDBView hover zoom>
-        <Card.Img variant="top" src={ph} />
-        <MDBMask className="flex-center">
-          <p className="white-text" >about</p>
-        </MDBMask>
-      </MDBView>
-    </Card>
-  )
+    return (
+        <StyledCard bg="dark" text="light">
+            <MDBView hover zoom>
+                <Card.Img variant="top" src={ph} />
+                <MDBMask className="flex-center">
+                    <p className="white-text" >about</p>
+                </MDBMask>
+            </MDBView>
+        </StyledCard>
+    )
 }
 
 export default About;

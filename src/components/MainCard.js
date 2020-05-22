@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import CardGroup from "react-bootstrap/CardGroup";
 import "holderjs";
 import About from "./about/About";

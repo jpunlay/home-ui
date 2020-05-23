@@ -83,12 +83,12 @@ class TopNav extends React.Component {
                         </p>
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button variant="secondary" onClick={this.handleClose}>
+                        <Button variant="light" onClick={this.handleClose}>
                             Close
-                    </Button>
-                        <Button variant="primary" onClick={this.handleClose}>
+                        </Button>
+                        <Button variant="dark" onClick={this.handleClose}>
                             Save Changes
-                    </Button>
+                        </Button>
                     </Modal.Footer>
                 </Modal>
 

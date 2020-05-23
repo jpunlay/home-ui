@@ -24,20 +24,20 @@ class TopNav extends React.Component {
         super(props);
         this.handleShow = this.handleShow.bind(this);
         this.handleClose = this.handleClose.bind(this);
-        this.state = { show: false };
+        this.state = { showResume: false };
     }
 
     handleShow() {
         console.log("show");
-        this.setState({ show: true });
+        this.setState({ showResume: true });
     }
     handleClose() {
         console.log("close");
-        this.setState({ show: false });
+        this.setState({ showResume: false });
     }
 
     render() {
-        const show = this.state.show;
+        const showResume = this.state.showResume;
 
         return (
             <div className="topNav">
@@ -55,11 +55,33 @@ class TopNav extends React.Component {
                         </Nav>
                     </Navbar.Collapse>
                 </StyledNavBar>
-                <Modal show={show} onHide={this.handleClose}>
+
+                {/* Resume popup modal */}
+                <Modal size="xl" show={showResume} onHide={this.handleClose}>
                     <Modal.Header closeButton>
-                        <Modal.Title>Modal heading</Modal.Title>
+                        <Modal.Title>Jesus Punlay Resume</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+                    <Modal.Body>
+                        <p>
+                            Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde
+                            commodi aspernatur enim, consectetur. Cumque deleniti temporibus
+                            ipsam atque a dolores quisquam quisquam adipisci possimus
+                            laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod
+                            accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia
+                            reiciendis porro quo magni incidunt dolore amet atque facilis ipsum
+                            deleniti rem!
+                        </p>
+                        <h2>Education</h2>
+                        <p>
+                            Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde
+                            commodi aspernatur enim, consectetur. Cumque deleniti temporibus
+                            ipsam atque a dolores quisquam quisquam adipisci possimus
+                            laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod
+                            accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia
+                            reiciendis porro quo magni incidunt dolore amet atque facilis ipsum
+                            deleniti rem!
+                        </p>
+                    </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={this.handleClose}>
                             Close
@@ -69,6 +91,7 @@ class TopNav extends React.Component {
                     </Button>
                     </Modal.Footer>
                 </Modal>
+
             </div>
         );
     }

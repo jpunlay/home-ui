@@ -59,7 +59,9 @@ class TopNav extends React.Component {
                 {/* Resume popup modal */}
                 <Modal size="xl" show={showResume} onHide={this.handleClose}>
                     <Modal.Header closeButton>
-                        <Modal.Title>Jesus Punlay Resume</Modal.Title>
+                        <Modal.Title>Jesus Punlay Resume <br></br>
+                            <pre>(123)456-7890     |     jpunlay@gmail.com     |     101 main stareet; Knightdale, NC; 27545</pre>
+                        </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         <p>

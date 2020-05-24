@@ -6,7 +6,7 @@ class Resume extends React.Component {
     render() {
         return (
             <>
-                <Modal size="xl" show={this.props.showResume} onHide={this.props.handleClose}>
+                <Modal size="xl" show={this.props.showResume} onHide={this.props.hideResume}>
                     <Modal.Header closeButton>
                         <Modal.Title>Jesus Punlay Resume <br></br>
                             <pre>(123)456-7890  |  jpunlay@gmail.com  |  101 main stareet; Knightdale, NC; 27545</pre>
@@ -52,10 +52,10 @@ class Resume extends React.Component {
                         </p>
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button variant="light" onClick={this.props.handleClose}>
+                        <Button variant="light" onClick={this.props.hideResume}>
                             Close
                         </Button>
-                        <Button variant="dark" onClick={this.props.handleClose}>
+                        <Button variant="dark" onClick={this.props.hideResume}>
                             Download
                         </Button>
                     </Modal.Footer>

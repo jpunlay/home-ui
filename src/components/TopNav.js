@@ -27,7 +27,7 @@ class TopNav extends React.Component {
         this.hideResume = this.hideResume.bind(this);
         this.state = { showResume: false };
         // Feedback
-        this.showFeedback = this.showFeedback.bind(this);
+        this.openFeedback = this.openFeedback.bind(this);
         this.hideFeedback = this.hideFeedback.bind(this);
         this.state = { showFeedback: false };
     }
@@ -36,7 +36,7 @@ class TopNav extends React.Component {
 
     hideResume() { this.setState({ showResume: false }) }
 
-    showFeedback() { this.setState({ showFeedback: true }) }
+    openFeedback() { console.log(this.state.showFeedback); this.setState({ showFeedback: true }); console.log('at showfeedback'); console.log(this.state.showFeedback) }
 
     hideFeedback() { this.setState({ showFeedback: false }) }
 
@@ -52,7 +52,7 @@ class TopNav extends React.Component {
                         <Nav className="ml-auto">
                             <Nav.Link href="/dope">blog</Nav.Link>
                             <Nav.Link href="#resume" onClick={() => this.showResume()}>resume</Nav.Link>
-                            <Nav.Link href="#feedback" onClick={() => this.showFeedback()}>feedback</Nav.Link>
+                            <Nav.Link onClick={() => this.openFeedback()}>feedback</Nav.Link>
                             <div style={{padding: '.5rem'}}>
                                 <FollowAt links={repository} color="grey" hoverColor="white" iconSize="1"/>
                             </div>
@@ -62,7 +62,7 @@ class TopNav extends React.Component {
 
                 {/* Resume popup modal */}
                 <Resume showResume={this.state.showResume} hideResume={this.hideResume}></Resume>
-                <Feedback showFeedback={this.state.showFeedback} hideFeedback={this.hideFeedback}></Feedback>
+                <Feedback showFeedback={this.state.showFeedback} openFeedback={this.openFeedback} hideFeedback={this.hideFeedback}></Feedback>
             </div>
         );
     }

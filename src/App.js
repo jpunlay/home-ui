@@ -38,7 +38,7 @@ function App() {
         <BrowserRouter>
             <div className="App">
                 <TopNav></TopNav>
-                <Route path="/">
+                <Route path="/home">
                     <StyledTopBox className="topBox">
                         <StyledTopBoxPar>
                         </StyledTopBoxPar>

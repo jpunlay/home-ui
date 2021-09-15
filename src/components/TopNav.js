@@ -28,11 +28,9 @@ export function TopNav() {
     return (
         <div className="topNav">
             <StyledNavBar bg="dark" variant="dark" expand="lg">
-                <Nav className="ml-auto">
-                    <Nav.Link href="/"><FontAwesomeIcon icon={faCoffee} /></Nav.Link>
-                </Nav>
-                <StyledNavBarBrand href="/">
-                    JP
+
+                <StyledNavBarBrand href="/home">
+                    <FontAwesomeIcon icon={faCoffee}/>  JP
                 </StyledNavBarBrand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">

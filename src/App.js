@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import TopNav from './components/TopNav';
+import { TopNav } from './components/TopNav';
 import MainCard from './components/MainCard';
 import FollowAt from "react-social-media-follow";
 
@@ -38,7 +38,7 @@ function App() {
         <BrowserRouter>
             <div className="App">
                 <TopNav></TopNav>
-                <Route path="/home-ui">
+                <Route path="/">
                     <StyledTopBox className="topBox">
                         <StyledTopBoxPar>
                         </StyledTopBoxPar>

@@ -29,7 +29,7 @@ export function TopNav() {
         <div className="topNav">
             <StyledNavBar bg="dark" variant="dark" expand="lg">
 
-                <StyledNavBarBrand href="/home">
+                <StyledNavBarBrand href="/home-ui">
                     <FontAwesomeIcon icon={faCoffee}/>  JP
                 </StyledNavBarBrand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />

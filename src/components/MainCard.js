@@ -42,11 +42,10 @@ export function MainCard() {
             default:
                 console.log("No card with name: " + openedCard);
         }
-        console.log(isCardOpen)
     }
 
     let main;
-    
+
     if (!isCardOpen) {
         main =
             <StyledMainCard className="mainCard">

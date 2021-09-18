@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CardGroup from "react-bootstrap/CardGroup";
-import "holderjs";
 import About from "./about/About";
 import Hobbies from "./hobbies/Hobbies";
 import Projects from "./projects/Projects";
@@ -13,76 +12,64 @@ import LifeDescription from "./life/LifeDescription";
 import AboutDescription from "./about/AboutDescription";
 import styled from "styled-components";
 
-class MainCard extends React.Component {
-    constructor(props) {
-        super(props);
-        this.handleOpenClick = this.handleOpenClick.bind(this);
-        this.handleCloseClick = this.handleCloseClick.bind(this);
-        this.state = { isOpen: false };
-        this.state = { openedCard: null };
-    }
+const StyledMainCard = styled.div`
+    background-color: black;
+`;
 
-    handleOpenClick(openedCard) {
-        this.setState({ isOpen: true });
+export function MainCard() {
+    const [isCardOpen, setIsCardOpen] = useState(false)
+    const [openedCard, setOpenedCard] = useState(null)
+
+    function handleOpenClick(openedCard) {
+        setIsCardOpen(true)
         switch (openedCard) {
             case "project":
-                this.setState({ openedCard: <ProjectsDescription onClick={this.handleCloseClick}></ProjectsDescription> });
+                console.log('projects')
+                setOpenedCard(<ProjectsDescription onClick={() => setIsCardOpen(false)}></ProjectsDescription>);
                 break;
             case "hobbies":
-                this.setState({ openedCard: <HobbiesDescription onClick={this.handleCloseClick}></HobbiesDescription> });
+                setOpenedCard(<HobbiesDescription onClick={() => setIsCardOpen(false)}></HobbiesDescription>);
                 break;
             case "articles":
-                this.setState({ openedCard: <ArticlesDescription onClick={this.handleCloseClick}></ArticlesDescription> });
+                setOpenedCard(<ArticlesDescription onClick={() => setIsCardOpen(false)}></ArticlesDescription>);
                 break;
             case "life":
-                this.setState({ openedCard: <LifeDescription onClick={this.handleCloseClick}></LifeDescription> });
+                setOpenedCard(<LifeDescription onClick={() => setIsCardOpen(false)}></LifeDescription>);
                 break;
             case "about":
-                this.setState({ openedCard: <AboutDescription onClick={this.handleCloseClick}></AboutDescription> });
+                setOpenedCard(<AboutDescription onClick={() => setIsCardOpen(false)}></AboutDescription>);
                 break;
             default:
                 console.log("No card with name: " + openedCard);
         }
+        console.log(isCardOpen)
     }
 
-    handleCloseClick() {
-        this.setState({ isOpen: false });
+    let main;
+    
+    if (!isCardOpen) {
+        main =
+            <StyledMainCard className="mainCard">
+                <CardGroup>
+                    <Projects onClick={() => handleOpenClick('project')}></Projects>
+                    <Hobbies onClick={() => handleOpenClick('hobbies')}></Hobbies>
+                </CardGroup>
+                <CardGroup>
+                    <About onClick={() => handleOpenClick('about')}></About>
+                    <Articles onClick={() => handleOpenClick('articles')}></Articles>
+                    <Life onClick={() => handleOpenClick('life')}></Life>
+                </CardGroup>
+            </StyledMainCard>;
+    } else {
+        main =
+            <div className="descriptionCard">
+                {openedCard}
+            </div>;
     }
 
-    render() {
-        const isOpen = this.state.isOpen;
-        const openedCard = this.state.openedCard;
-        let main;
-
-        const StyledMainCard = styled.div`
-            background-color: black;
-        `;
-
-        if (!isOpen) {
-            main =
-                <StyledMainCard className="mainCard">
-                    <CardGroup>
-                        <Projects onClick={() => this.handleOpenClick('project')}></Projects>
-                        <Hobbies onClick={() => this.handleOpenClick('hobbies')}></Hobbies>
-                    </CardGroup>
-                    <CardGroup>
-                        <About onClick={() => this.handleOpenClick('about')}></About>
-                        <Articles onClick={() => this.handleOpenClick('articles')}></Articles>
-                        <Life onClick={() => this.handleOpenClick('life')}></Life>
-                    </CardGroup>
-                </StyledMainCard>;
-        } else {
-            main =
-                <div className="descriptionCard">
-                    {openedCard}
-                </div>;
-        }
-
-        return (
-            <div>
-                {main}
-            </div>
-        );
-    }
+    return (
+        <div>
+            {main}
+        </div>
+    );
 }
-export default MainCard;

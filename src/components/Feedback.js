@@ -4,13 +4,9 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import axios from 'axios';
 
+export function Feedback(props) {
 
-class Feedback extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
-    openIssue = (event) => {
+    function openIssue(event) {
         event.preventDefault();
         const form = event.currentTarget;
 
@@ -26,44 +22,34 @@ class Feedback extends React.Component {
 
         axios.post(`https://api.github.com/repos/jpunlay/home-ui/issues`, data, {
             headers: headers
-        })
-        .then(res => {
-            console.log(res);
-            console.log(res.data);
-            this.props.hideFeedback();
-        })
+        }).finally(props.onCloseClick())
     };
 
+    return (
+        <>
+            <Modal size="s" show={props.showFeedback} onHide={props.onCloseClick}>
+                <Modal.Body>
+                    <Form onSubmit={openIssue}>
+                        <Form.Group controlId="issueTitle">
+                            <Form.Label>Issue Summary</Form.Label>
+                            <Form.Control tas="textarea" />
+                        </Form.Group>
+                        <Form.Group controlId="issueBody">
+                            <Form.Label>Description</Form.Label>
+                            <Form.Control as="textarea" rows="3" />
+                        </Form.Group>
+                        <div style={{ float: 'right' }}>
+                            <Button variant="light" onClick={props.onCloseClick}>
+                                Close
+                            </Button>
+                            <Button variant="dark" type="submit">
+                                Submit
+                            </Button>
+                        </div>
+                    </Form>
+                </Modal.Body>
+            </Modal>
 
-    render() {
-        return (
-            <>
-                <Modal size="s" show={this.props.showFeedback} onHide={this.props.hideFeedback}>
-                    <Modal.Body>
-                        <Form onSubmit={this.openIssue}>
-                            <Form.Group controlId="issueTitle">
-                                <Form.Label>Issue Summary</Form.Label>
-                                <Form.Control tas="textarea" />
-                            </Form.Group>
-                            <Form.Group controlId="issueBody">
-                                <Form.Label>Description</Form.Label>
-                                <Form.Control as="textarea" rows="3" />
-                            </Form.Group>
-                            <div style={{ float: 'right' }}>
-                                <Button variant="light" onClick={this.props.hideFeedback}>
-                                    Close
-                                </Button>
-                                <Button variant="dark" type="submit">
-                                    Submit
-                                </Button>
-                            </div>
-                        </Form>
-                    </Modal.Body>
-                </Modal>
-
-            </>
-        )
-    }
+        </>
+    )
 }
-
-export default Feedback

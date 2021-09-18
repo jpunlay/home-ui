@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import styled from 'styled-components';
 import FollowAt from "react-social-media-follow";
 import { Resume } from "./Resume";
-import Feedback from './Feedback';
+import { Feedback } from './Feedback';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 

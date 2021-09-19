@@ -9,7 +9,7 @@ const StyledCard = styled(Card)`
 `;
 
 const StyledCardImg = styled(Card.Img)`
-    border: 15px solid #000000;
+    padding: 15px;
 `;
 
 function Projects(props) {

@@ -10,7 +10,6 @@ const StyledCard = styled(Card)`
 
 const StyledCardImg = styled(Card.Img)`
     opacity: 0.7;
-    // border: 25px solid #000000;
     padding: 35px 25px 0;
 `;
 

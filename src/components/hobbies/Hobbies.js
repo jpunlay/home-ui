@@ -4,16 +4,20 @@ import { MDBView, MDBMask } from "mdbreact";
 import tri from './../../images/tri.jpg';
 import Card from 'react-bootstrap/Card';
 
+const StyledCard = styled(Card)`
+    background-color: black !important;
+`;
+
+const StyledCardImg = styled(Card.Img)`
+    opacity: 0.7;
+    border: 15px solid #000000;
+`;
+
 function Hobbies(props) {
-
-    const StyledCard = styled(Card)`
-      background-color: black !important;
-    `;
-
     return (
         <StyledCard bg="dark" text="light" onClick={props.onClick}>
             <MDBView hover zoom>
-                <Card.Img variant="top" src={tri} />
+                <StyledCardImg variant="top" src={tri} />
                 <MDBMask className="flex-center">
                     <p className="white-text">Hobbies</p>
                 </MDBMask>

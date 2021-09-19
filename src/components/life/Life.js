@@ -1,18 +1,23 @@
 import React from "react";
 import styled from 'styled-components';
 import { MDBView, MDBMask } from "mdbreact";
-import ph from './../../images/ph1.jpeg';
+import alpaca from './../../images/alpaca.jpeg';
 import Card from 'react-bootstrap/Card';
 
 const StyledCard = styled(Card)`
     background-color: black !important;
 `;
 
+const StyledCardImg = styled(Card.Img)`
+    opacity: 0.7;
+    border: 15px solid #000000;
+`;
+
 function Life(props) {
     return (
         <StyledCard bg="dark" text="light" onClick={props.onClick}>
             <MDBView hover zoom>
-                <Card.Img variant="top" src={ph} />
+                <StyledCardImg variant="top" src={alpaca} />
                 <MDBMask className="flex-center">
                     <p className="white-text" >life(home)</p>
                 </MDBMask>

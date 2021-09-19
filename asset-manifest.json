@@ -1,20 +1,22 @@
 {
   "files": {
     "main.css": "/home-ui/static/css/main.0e691ced.chunk.css",
-    "main.js": "/home-ui/static/js/main.3dbdcef1.chunk.js",
-    "main.js.map": "/home-ui/static/js/main.3dbdcef1.chunk.js.map",
+    "main.js": "/home-ui/static/js/main.c2267d17.chunk.js",
+    "main.js.map": "/home-ui/static/js/main.c2267d17.chunk.js.map",
     "runtime-main.js": "/home-ui/static/js/runtime-main.f2e75d92.js",
     "runtime-main.js.map": "/home-ui/static/js/runtime-main.f2e75d92.js.map",
     "static/css/2.5953499f.chunk.css": "/home-ui/static/css/2.5953499f.chunk.css",
-    "static/js/2.81f85f64.chunk.js": "/home-ui/static/js/2.81f85f64.chunk.js",
-    "static/js/2.81f85f64.chunk.js.map": "/home-ui/static/js/2.81f85f64.chunk.js.map",
+    "static/js/2.7fa5e992.chunk.js": "/home-ui/static/js/2.7fa5e992.chunk.js",
+    "static/js/2.7fa5e992.chunk.js.map": "/home-ui/static/js/2.7fa5e992.chunk.js.map",
     "index.html": "/home-ui/index.html",
-    "precache-manifest.4b912f8079ca5fa6b6e7cd08247d7613.js": "/home-ui/precache-manifest.4b912f8079ca5fa6b6e7cd08247d7613.js",
+    "precache-manifest.b0d4374d8800ad281a8eeb80ba5b19ae.js": "/home-ui/precache-manifest.b0d4374d8800ad281a8eeb80ba5b19ae.js",
     "service-worker.js": "/home-ui/service-worker.js",
     "static/css/2.5953499f.chunk.css.map": "/home-ui/static/css/2.5953499f.chunk.css.map",
     "static/css/main.0e691ced.chunk.css.map": "/home-ui/static/css/main.0e691ced.chunk.css.map",
-    "static/js/2.81f85f64.chunk.js.LICENSE.txt": "/home-ui/static/js/2.81f85f64.chunk.js.LICENSE.txt",
+    "static/js/2.7fa5e992.chunk.js.LICENSE.txt": "/home-ui/static/js/2.7fa5e992.chunk.js.LICENSE.txt",
+    "static/media/alpaca.jpeg": "/home-ui/static/media/alpaca.c74ac210.jpeg",
     "static/media/mdb.css": "/home-ui/static/media/arrow_right.8ef6a08c.svg",
+    "static/media/bear.jpeg": "/home-ui/static/media/bear.a4653731.jpeg",
     "static/media/bulb.jpg": "/home-ui/static/media/bulb.e4cabfe1.jpg",
     "static/media/all.min.css": "/home-ui/static/media/fa-solid-900.ec763292.svg",
     "static/media/ph1.jpeg": "/home-ui/static/media/ph1.c8d08e25.jpeg",
@@ -24,8 +26,8 @@
   "entrypoints": [
     "static/js/runtime-main.f2e75d92.js",
     "static/css/2.5953499f.chunk.css",
-    "static/js/2.81f85f64.chunk.js",
+    "static/js/2.7fa5e992.chunk.js",
     "static/css/main.0e691ced.chunk.css",
-    "static/js/main.3dbdcef1.chunk.js"
+    "static/js/main.c2267d17.chunk.js"
   ]
 }

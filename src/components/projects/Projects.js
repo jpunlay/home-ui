@@ -8,16 +8,16 @@ const StyledCard = styled(Card)`
 `;
 
 const StyledCardImg = styled(Card.Img)`
-    padding: 15px;
+    height: 22rem;
 `;
 
 const Projects = (props) => {
     return (
         <StyledCard bg="dark" text="light" onClick={props.onClick}>
             <div className='bg-image hover-zoom'>
-                <StyledCardImg variant="top" src={bulb} />
+                <StyledCardImg variant="top" src={bulb}/>
                 <div className='bg-image'>
-                    <p className="white-text" style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}>{"> Hello World"}</p>
+                    <p>{"> Hello World"}</p>
                 </div>
             </div>
         </StyledCard>

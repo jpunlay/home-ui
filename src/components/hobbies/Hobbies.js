@@ -9,7 +9,7 @@ const StyledCard = styled(Card)`
 
 const StyledCardImg = styled(Card.Img)`
     opacity: 0.7;
-    padding: 15px;
+    height: 22rem;
 `;
 
 function Hobbies(props) {

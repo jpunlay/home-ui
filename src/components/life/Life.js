@@ -15,8 +15,12 @@ const StyledCardImg = styled(Card.Img)`
 function Life(props) {
     return (
         <StyledCard bg="dark" text="light" onClick={props.onClick}>
-            <StyledCardImg variant="top" src={alpaca} />
-            <p className="white-text" >life(home)</p>
+            <div className='bg-image hover-zoom'>
+                <StyledCardImg variant="top" src={alpaca} />
+                <div className='bg-image'>
+                    <p className="white-text" >life(home)</p>
+                </div>
+            </div>
         </StyledCard>
     )
 }

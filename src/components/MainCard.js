@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import CardGroup from "react-bootstrap/CardGroup";
 import About from "./about/About";
 import Hobbies from "./hobbies/Hobbies";
@@ -24,7 +24,6 @@ export function MainCard() {
         setIsCardOpen(true)
         switch (openedCard) {
             case "project":
-                console.log('projects')
                 setOpenedCard(<ProjectsDescription onClick={() => setIsCardOpen(false)}></ProjectsDescription>);
                 break;
             case "hobbies":

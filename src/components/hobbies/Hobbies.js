@@ -1,6 +1,5 @@
 import React from "react";
 import styled from 'styled-components';
-import { MDBView, MDBMask } from "mdbreact";
 import tri from './../../images/tri.jpg';
 import Card from 'react-bootstrap/Card';
 
@@ -16,12 +15,12 @@ const StyledCardImg = styled(Card.Img)`
 function Hobbies(props) {
     return (
         <StyledCard bg="dark" text="light" onClick={props.onClick}>
-            <MDBView hover zoom>
+            <div className='bg-image hover-zoom'>
                 <StyledCardImg variant="top" src={tri} />
-                <MDBMask className="flex-center">
+                <div className='bg-image'>
                     <p className="white-text">Hobbies</p>
-                </MDBMask>
-            </MDBView>
+                </div>
+            </div>
         </StyledCard>
     )
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { MDBView, MDBMask } from "mdbreact";
 import bulb from "./../../images/bulb.jpg";
 import Card from "react-bootstrap/Card";
 
@@ -12,15 +11,15 @@ const StyledCardImg = styled(Card.Img)`
     padding: 15px;
 `;
 
-function Projects(props) {
+const Projects = (props) => {
     return (
         <StyledCard bg="dark" text="light" onClick={props.onClick}>
-            <MDBView hover zoom>
+            <div className='bg-image hover-zoom'>
                 <StyledCardImg variant="top" src={bulb} />
-                <MDBMask className="flex-center">
-                    <p className="white-text">{"> Hello World"}</p>
-                </MDBMask>
-            </MDBView>
+                <div className='bg-image'>
+                    <p className="white-text" style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}>{"> Hello World"}</p>
+                </div>
+            </div>
         </StyledCard>
     );
 }

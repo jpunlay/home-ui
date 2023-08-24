@@ -1,6 +1,5 @@
 import React from "react";
 import styled from 'styled-components';
-import { MDBView, MDBMask } from "mdbreact";
 import alpaca from './../../images/alpaca.jpeg';
 import Card from 'react-bootstrap/Card';
 
@@ -16,12 +15,8 @@ const StyledCardImg = styled(Card.Img)`
 function Life(props) {
     return (
         <StyledCard bg="dark" text="light" onClick={props.onClick}>
-            <MDBView hover zoom>
-                <StyledCardImg variant="top" src={alpaca} />
-                <MDBMask className="flex-center">
-                    <p className="white-text" >life(home)</p>
-                </MDBMask>
-            </MDBView>
+            <StyledCardImg variant="top" src={alpaca} />
+            <p className="white-text" >life(home)</p>
         </StyledCard>
     )
 }

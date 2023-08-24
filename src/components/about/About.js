@@ -1,6 +1,5 @@
 import React from "react";
 import styled from 'styled-components';
-import { MDBView, MDBMask } from "mdbreact";
 import bear from './../../images/bear.jpeg';
 import Card from 'react-bootstrap/Card';
 
@@ -16,12 +15,8 @@ const StyledCardImg = styled(Card.Img)`
 function About(props) {
     return (
         <StyledCard bg="dark" text="light" onClick={props.onClick}>
-            <MDBView hover zoom>
-                <StyledCardImg variant="top" src={bear} />
-                <MDBMask className="flex-center">
-                    <p className="white-text" >about</p>
-                </MDBMask>
-            </MDBView>
+            <StyledCardImg variant="top" src={bear} />
+            <p className="white-text" >about</p>
         </StyledCard>
     )
 }

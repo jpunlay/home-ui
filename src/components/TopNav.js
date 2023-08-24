@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import styled from 'styled-components';
-import FollowAt from "react-social-media-follow";
 import { Resume } from "./Resume";
 import { Feedback } from './Feedback';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -39,7 +38,7 @@ export function TopNav() {
                         <Nav.Link onClick={() => setShowResume(true)}>resume</Nav.Link>
                         <Nav.Link onClick={() => setShowFeedback(true)}>feedback</Nav.Link>
                         <div style={{ padding: '.5rem' }}>
-                            <FollowAt links={repository} color="grey" hoverColor="white" iconSize="1" />
+                            {/* <FollowAt links={repository} color="grey" hoverColor="white" iconSize="1" /> */}
                         </div>
                     </Nav>
                 </Navbar.Collapse>

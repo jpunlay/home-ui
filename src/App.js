@@ -1,11 +1,10 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { TopNav } from './components/TopNav';
-import { MainCard } from './components/MainCard';
-import FollowAt from "react-social-media-follow";
+import { MainCard } from './components/MainCard.js';
 
 const StyledMainCard = styled.div`
     background-color: #000000!important;
@@ -33,21 +32,24 @@ const links = [
     'https://github.com/jpunlay'
 ];
 
-function App() {
+function App () {
     return (
         <BrowserRouter>
             <div className="App">
                 <TopNav></TopNav>
-                <Route path="/home-ui">
-                    <StyledTopBox className="topBox">
-                        <StyledTopBoxPar>
-                        </StyledTopBoxPar>
-                    </StyledTopBox>
-                    <StyledMainCard>
-                        <MainCard></MainCard>
-                    </StyledMainCard>
-                    <FollowAt links = {links} color="grey" hoverColor="white" iconSize="1" />
-                </Route>
+                <Routes>
+                    <Route path="/home-ui" element={
+                        <div>
+                            <StyledTopBox className="topBox">
+                                <StyledTopBoxPar>
+                                </StyledTopBoxPar>
+                            </StyledTopBox>
+                            <StyledMainCard>
+                                <MainCard></MainCard>
+                            </StyledMainCard>
+                            {/* //                        <FollowAt links = {links} color="grey" hoverColor="white" iconSize="1" /> */}
+                            </div>} />
+                </Routes>
             </div>
         </BrowserRouter>
     );

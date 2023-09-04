@@ -13,8 +13,7 @@ import AboutDescription from "./about/AboutDescription";
 import styled from "styled-components";
 
 const StyledMainCard = styled.div`
-    background-color: black;
-    padding: 0 100px 0;
+    background-color: black!important;
 `;
 
 export function MainCard() {
@@ -49,11 +48,11 @@ export function MainCard() {
     if (!isCardOpen) {
         main =
             <StyledMainCard className="mainCard">
-                <CardGroup style={{ height: '25rem' }}>
+                <CardGroup>
                     <Projects onClick={() => handleOpenClick('project')}></Projects>
                     <Hobbies onClick={() => handleOpenClick('hobbies')}></Hobbies>
                 </CardGroup>
-                <CardGroup style={{ height: '18rem' }}>
+                <CardGroup>
                     <About onClick={() => handleOpenClick('about')}></About>
                     <Articles onClick={() => handleOpenClick('articles')}></Articles>
                     <Life onClick={() => handleOpenClick('life')}></Life>

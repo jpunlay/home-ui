@@ -10,6 +10,7 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 const StyledNavBar = styled(Navbar)`
     background-color: #000000!important;
     font-size: .85rem;
+    padding: 0 .5rem;
 `;
 
 const StyledNavBarBrand = styled(Navbar.Brand)`
@@ -37,9 +38,9 @@ export function TopNav() {
                         <Nav.Link>blog</Nav.Link>
                         <Nav.Link onClick={() => setShowResume(true)}>resume</Nav.Link>
                         <Nav.Link onClick={() => setShowFeedback(true)}>feedback</Nav.Link>
-                        <div style={{ padding: '.5rem' }}>
+                        {/* <div style={{ padding: '.5rem' }}> */}
                             {/* <FollowAt links={repository} color="grey" hoverColor="white" iconSize="1" /> */}
-                        </div>
+                        {/* </div> */}
                     </Nav>
                 </Navbar.Collapse>
             </StyledNavBar>

@@ -6,9 +6,15 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { TopNav } from './components/TopNav';
 import { MainCard } from './components/MainCard.js';
 
+const StyledApp = styled.div`
+    background-color: #000000!important;
+    text-align: center;
+    min-height: 100vh;
+`;
 const StyledMainCard = styled.div`
     background-color: #000000!important;
-    padding: 1em 2em;
+    padding: 1em 8em;
+    min-height: 100%!important;
 `;
 
 const StyledTopBox = styled.div`
@@ -19,7 +25,6 @@ const StyledTopBox = styled.div`
 const StyledTopBoxPar = styled.p`
     margin: 0!important;
     text-align: center;
-    // line-height: 400px;
     color: #555555;
 `;
 
@@ -35,7 +40,7 @@ const links = [
 function App () {
     return (
         <BrowserRouter>
-            <div className="App">
+            <StyledApp>
                 <TopNav></TopNav>
                 <Routes>
                     <Route path="/home-ui" element={
@@ -47,10 +52,10 @@ function App () {
                             <StyledMainCard>
                                 <MainCard></MainCard>
                             </StyledMainCard>
-                            {/* //                        <FollowAt links = {links} color="grey" hoverColor="white" iconSize="1" /> */}
+                                                    {/* <FollowAt links = {links} color="grey" hoverColor="white" iconSize="1" /> */}
                             </div>} />
                 </Routes>
-            </div>
+            </StyledApp>
         </BrowserRouter>
     );
 }

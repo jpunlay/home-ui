@@ -38,16 +38,16 @@ export function Feedback(props) {
                             <Form.Label>Description</Form.Label>
                             <Form.Control as="textarea" rows="3" />
                         </Form.Group>
-                        <div style={{ float: 'right' }}>
-                            <Button variant="light" onClick={props.onCloseClick}>
-                                Close
-                            </Button>
-                            <Button variant="dark" type="submit">
-                                Submit
-                            </Button>
-                        </div>
                     </Form>
                 </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="light" size='sm' onClick={props.onCloseClick}>
+                        Close
+                    </Button>
+                    <Button variant="dark" size='sm' type="submit">
+                        Submit
+                    </Button>
+                </Modal.Footer>
             </Modal>
 
         </>

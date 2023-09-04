@@ -9,7 +9,8 @@ const StyledCard = styled(Card)`
 
 const StyledCardImg = styled(Card.Img)`
     opacity: 0.7;
-    padding: 15px;
+    padding: 2em;
+    height: 85%;
 `;
 
 function Life(props) {
@@ -18,7 +19,7 @@ function Life(props) {
             <div className='bg-image hover-zoom'>
                 <StyledCardImg variant="top" src={alpaca} />
                 <div className='bg-image'>
-                    <p className="white-text" >life(home)</p>
+                    <p className="white-text">{"> life"}</p>
                 </div>
             </div>
         </StyledCard>

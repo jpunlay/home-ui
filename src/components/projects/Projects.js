@@ -8,7 +8,7 @@ const StyledCard = styled(Card)`
 `;
 
 const StyledCardImg = styled(Card.Img)`
-    height: 22rem;
+    height: 85%;
 `;
 
 const Projects = (props) => {

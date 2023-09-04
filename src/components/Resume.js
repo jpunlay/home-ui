@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+import styled from 'styled-components';
 
 export function Resume(props) {
 
@@ -52,10 +53,10 @@ export function Resume(props) {
                     </p>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="light" onClick={props.onCloseClick}>
+                    <Button variant="light" size='sm' onClick={props.onCloseClick}>
                         Close
                     </Button>
-                    <Button variant="dark" onClick={props.onCloseClick}>
+                    <Button variant="dark" size='sm' onClick={props.onCloseClick}>
                         Download
                     </Button>
                 </Modal.Footer>

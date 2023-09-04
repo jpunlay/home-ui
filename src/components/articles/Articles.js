@@ -7,13 +7,18 @@ const StyledCard = styled(Card)`
     background-color: black !important;
 `;
 
+const StyledCardImg = styled(Card.Img)`
+    padding: 2em;
+    height: 85%;
+`;
+
 function Articles(props) {
     return (
         <StyledCard bg="dark" text="light" onClick={props.onClick}>
             <div className='bg-image hover-zoom'>
-                <Card.Img variant="top" src={ph} />
+                <StyledCardImg variant="top" src={ph} />
                 <div className='bg-image'>
-                    <p className="white-text" >{"articles"}</p>
+                    <p className="white-text">{"> articles"}</p>
                 </div>
             </div>
         </StyledCard>

@@ -9,7 +9,7 @@ const StyledCard = styled(Card)`
 
 const StyledCardImg = styled(Card.Img)`
     opacity: 0.7;
-    height: 22rem;
+    height: 85%;
 `;
 
 function Hobbies(props) {
@@ -18,7 +18,7 @@ function Hobbies(props) {
             <div className='bg-image hover-zoom'>
                 <StyledCardImg variant="top" src={tri} />
                 <div className='bg-image'>
-                    <p className="white-text">Hobbies</p>
+                    <p className="white-text">{"> Hobbies"}</p>
                 </div>
             </div>
         </StyledCard>

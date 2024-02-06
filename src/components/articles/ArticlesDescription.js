@@ -4,31 +4,22 @@ import sign from "./../../images/sign.jpg";
 import Card from "react-bootstrap/Card";
 
 const StyledText = styled.div`
-  color: light-grey;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: justify;
-  text-justify: inter-word;
+    color: light-grey;
+    margin: 5%;
+    text-align: justify;
+    text-justify: inter-word;
 `;
 
 const StyledCard = styled(Card)`
     background-color: black !important;
-    height: 45vw;
-    display: block;
-    width: 100%;
-`;
-
-const StyledImage = styled(Card.Img)`
-    height: 100%!important;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
 `;
 
 function ArticlesDescription(props) {
     return (
         <StyledCard bg="dark" text="light" onClick={props.onClick}>
-            <StyledImage variant="top" src={sign} />
             <StyledText>
                 <h2>Articles</h2>
                 <p className="grey-text">
@@ -59,6 +50,7 @@ function ArticlesDescription(props) {
                     culpa qui officia deserunt mollit anim id est laborum.
                 </p>
             </StyledText>
+            <Card.Img src={sign} />
         </StyledCard>
     );
 }

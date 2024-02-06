@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import styled from 'styled-components';
 import { Resume } from "./Resume";
@@ -10,7 +11,7 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 const StyledNavBar = styled(Navbar)`
     background-color: #000000!important;
     font-size: .85rem;
-    padding: 0 .5rem;
+    padding: 0 2rem;
 `;
 
 const StyledNavBarBrand = styled(Navbar.Brand)`
@@ -28,13 +29,12 @@ export function TopNav() {
     return (
         <div className="topNav">
             <StyledNavBar bg="dark" variant="dark" expand="lg">
-
                 <StyledNavBarBrand href="/home-ui">
-                    <FontAwesomeIcon icon={faCoffee}/>  JP
+                    <FontAwesomeIcon icon={faCoffee}/>JP
                 </StyledNavBarBrand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ml-auto">
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="me-auto">
                         <Nav.Link>blog</Nav.Link>
                         <Nav.Link onClick={() => setShowResume(true)}>resume</Nav.Link>
                         <Nav.Link onClick={() => setShowFeedback(true)}>feedback</Nav.Link>

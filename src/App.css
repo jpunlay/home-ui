@@ -3,6 +3,10 @@
   pointer-events: none;
 }
 
+.navbar-dark .navbar-toggler-icon {
+    background-image: var(--bs-navbar-toggler-icon-bg)
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

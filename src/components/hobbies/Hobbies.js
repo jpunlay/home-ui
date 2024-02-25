@@ -8,17 +8,19 @@ const StyledCard = styled(Card)`
 `;
 
 const StyledCardImg = styled(Card.Img)`
-    opacity: 0.7;
-    height: 85%;
+    opacity: 0.8;
 `;
 
 function Hobbies(props) {
     return (
         <StyledCard bg="dark" text="light" onClick={props.onClick}>
-            <div className='bg-image hover-zoom'>
+            <div class="bg-image hover-overlay hover-zoom hover-shadow ripple">
                 <StyledCardImg variant="top" src={tri} />
-                <div className='bg-image'>
-                    <p className="white-text">{"> Hobbies"}</p>
+                <div class="mask" style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                                           display: 'flex',
+                                           justifyContent: 'center',
+                                           alignItems: 'center'}}>
+                    <p>{"> Hobbies"}</p>
                 </div>
             </div>
         </StyledCard>

@@ -10,16 +10,19 @@ const StyledCard = styled(Card)`
 const StyledCardImg = styled(Card.Img)`
     opacity: 0.7;
     padding: 2em;
-    height: 85%;
+    height: 90%;
 `;
 
 function Life(props) {
     return (
         <StyledCard bg="dark" text="light" onClick={props.onClick}>
-            <div className='bg-image hover-zoom'>
+            <div class="bg-image hover-overlay hover-zoom hover-shadow ripple">
                 <StyledCardImg variant="top" src={alpaca} />
-                <div className='bg-image'>
-                    <p className="white-text">{"> life"}</p>
+                <div class="mask" style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                                           display: 'flex',
+                                           justifyContent: 'center',
+                                           alignItems: 'center'}}>
+                    <p>{"> life"}</p>
                 </div>
             </div>
         </StyledCard>

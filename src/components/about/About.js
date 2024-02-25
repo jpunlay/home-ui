@@ -16,10 +16,13 @@ const StyledCardImg = styled(Card.Img)`
 function About(props) {
     return (
         <StyledCard bg="dark" text="light" onClick={props.onClick}>
-            <div className='bg-image hover-zoom'>
+            <div class="bg-image hover-overlay hover-zoom hover-shadow ripple">
                 <StyledCardImg variant="top" src={bear} />
-                <div className='bg-image'>
-                    <p className="white-text">{"> about"}</p>
+                <div  class="mask" style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                                            display: 'flex',
+                                            justifyContent: 'center',
+                                            alignItems: 'center'}}>
+                    <p>{"> about"}</p>
                 </div>
             </div>
         </StyledCard>

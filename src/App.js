@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { TopNav } from './components/TopNav';
+import { BottomNav } from './components/BottomNav';
 import { MainCard } from './components/MainCard.js';
 
 const StyledApp = styled.div`
@@ -28,14 +29,6 @@ const StyledTopBoxPar = styled.p`
     color: #555555;
 `;
 
-const links = [
-    'https://www.linkedin.com/in/jesus-punlay-068098110/',
-    'https://twitter.com/jesuspunlay',
-    'https://www.facebook.com/jesuspunlay',
-    'https://www.youtube.com/jesuspunlay',
-    'https://www.instagram.com/jesuspunlay/',
-    'https://github.com/jpunlay'
-];
 
 function App () {
     return (
@@ -52,9 +45,9 @@ function App () {
                             <StyledMainCard>
                                 <MainCard></MainCard>
                             </StyledMainCard>
-                                                    {/* <FollowAt links = {links} color="grey" hoverColor="white" iconSize="1" /> */}
-                            </div>} />
+                    </div>} />
                 </Routes>
+                <BottomNav></BottomNav>
             </StyledApp>
         </BrowserRouter>
     );

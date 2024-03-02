@@ -14,7 +14,7 @@ const StyledApp = styled.div`
 `;
 const StyledMainCard = styled.div`
     background-color: #000000!important;
-    padding: 1% 8%;
+    padding: 0% 8%;
     min-height: 100%!important;
 `;
 

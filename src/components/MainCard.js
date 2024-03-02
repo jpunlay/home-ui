@@ -48,7 +48,7 @@ export function MainCard() {
     if (!isCardOpen) {
         main =
             <StyledMainCard className="mainCard">
-                <CardGroup style={{paddingBottom:"2%"}}>
+                <CardGroup style={{paddingBottom:"4%"}}>
                     <Projects onClick={() => handleOpenClick('project')}></Projects>
                     <Hobbies onClick={() => handleOpenClick('hobbies')}></Hobbies>
                 </CardGroup>
